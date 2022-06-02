@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Bhaskara</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+  
+<body>
+  
+  <h1>Calculadora de Bhaskara</h1>
+  <p>Para utilizar a Calculadora de Bhaskara, basta digitar os valores referentes a <strong>A</strong>, <strong>B</strong> e <strong>C</strong> da equação nos campos abaixo. Após, clique no botão para descobrir o valor de x' e x''.</p>
+  
+  <div class="area">
+    <div>
+      <span>A:</span>
+      <input type="number" id="varA" onkeyup="ativarBotao()">
+    </div>
+    <div>
+      <span>B:</span>
+      <input type="number" id="varB" onkeyup="ativarBotao()">
+    </div>
+    <div>
+      <span>C:</span>
+      <input type="number" id="varC" onkeyup="ativarBotao()">
+    </div>
+  </div>
+  
+  <div class="divBotao">
+    <button onclick="calcular()" class="botao" id="botao" disabled>Calcular</button>
+  </div>
+  
+  <div id="resultado" class="resultado">
+    
+  </div>
+  
+  <div>
+    <h2>Como funciona a equação do segundo grau</h2>
+    <p>A equação do segundo grau, ou também conhecido como função quadrática, possui o termo de maior grau elevado ao quadrado, por essa razão é chamada assim. A equação é representada por:</p>
+    <p class="formula"><strong>ax² + bx + c = 0</strong></p>
+    <p>Nessa equação, os valores representados pelas letras <strong>A</strong>, <strong>B</strong> e <strong>C</strong> são os coeficientes da equação, e o X é a incógnita.</p>
+    <p>Para ser considerado uma equação do segundo grau, o coeficiente <strong>A</strong>, acompanhado pela incógnita elevada ao quadrado, tem que ser diferente de <strong>zero</strong>.</p>
+    <h3>Passo a Passo</h3>
+    <p>Para resolver a equação usando a fórmula de Bhaskara, devemos seguir os seguintes passos:</p>
+    <ul class="listaNone">
+      <li><strong>1º Passo: </strong>Indentificar os coeficientes.
+    </ul>
+    <p>Para facilitar o reconhecimento dos coeficientes, que podem aparecer em ordens diferentes, conclui-se que o coeficiente <strong>A</strong> sempre estará junto ao x², o <strong>B</strong> seguido do x e o <strong>C</strong> é o termo sem o x.</p>
+    <ul class="listaNone">
+      <li><strong>2º Passo: </strong>Calcular o delta.
+    </ul>
+    <p>Para calcularmos a fórmula de Bhaskara, precisamos definir o valor do delta da equação do segundo grau. Por esse motivo utilizamos a próxima fórmula:</p>
+    <p class="formula"><strong>Δ = b² - 4.a.c</strong></p>
+    <p>Agora, a partir do valor do delta, calculamos a raiz quadrada do mesmo. Através do valor do delta, podemos concluir as possíveis situações abaixo:</p>
+    <ul class="listaCircle">
+      <li><strong>Δ &lt; 0 =</strong> A equação não possui raízes reais.
+      <li><strong>Δ = 0 =</strong> A equação possui apenas uma raiz real.
+      <li><strong>Δ > 0 =</strong> A equação possui duas raízes reais.
+    </ul>
+    <ul class="listaNone">
+      <li><strong>3º Passo: </strong>Calcular as raízes.
+    </ul>
+    <p>Com o valor de delta maior ou igual a zero, para descobrirmos os valores das raízes, basta calcular a seguinte fórmula de Bhaskara:</p>
+    <p class="formula"><strong>X = (-b ± √Δ) / 2.a</strong></p>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
